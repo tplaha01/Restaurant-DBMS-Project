@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Management</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Restaurant Management</h1>
+
+    <!-- Customer Form -->
+    <div class="form-container">
+        <h2>Add Customer</h2>
+        <form action="add_customer.php" method="POST">
+            <input type="text" name="customer_name" placeholder="Name" required>
+            <input type="text" name="customer_contact" placeholder="Contact" required>
+            <button type="submit">Add Customer</button>
+        </form>
+    </div>
+
+    <!-- Customer Table -->
+    <div class="table-container">
+        <h2>Customers</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Contact</th>
+            </tr>
+            <?php include 'get_customers.php'; ?>
+        </table>
+    </div>
+</body>
+</html>
